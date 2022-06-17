@@ -1,14 +1,15 @@
 {
-  "name": "asana-project-cdk",
-  "version": "0.1.0",
-  "bin": {
-    "asana-project-cdk": "bin/asana-project-cdk.js"
-  },
+  "name": "cdk-lambda-boilerplate",
+  "version": "1.0.0",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "cdk:deploy": "cdk deploy",
+    "cdk:destroy": "cdk destroy",
+    "cdk:synth": "cdk synth --no-staging",
+    "sam:run": "sam local invoke GetHello --no-event -t ./cdk.out/LambdaCdkStack.template.json"
   },
   "devDependencies": {
     "@types/jest": "^27.5.2",
